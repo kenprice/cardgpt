@@ -1,0 +1,95 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+
+.cardContainer {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 580px;
+}
+
+.cardTemplate {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(135, 135, 166) 35%, rgba(0,212,255,1) 100%);
+}
+
+.cardFace {
+    position: absolute;
+    width: 281px;
+    height: 309px;
+    top: 136px;
+    left: 60px;
+    z-index: 2;
+}
+
+.cardTitle {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+
+.starLevel {
+    font-size: 30px;
+    line-height: 22px;
+    position: absolute;
+    width: 22px;
+    top: 95px;
+    text-shadow: #FFF 1px 1px 6px;
+    mix-blend-mode: screen;
+}
+
+
+.cardIcon {
+    position: absolute;
+    top: 40px;
+    color: white;
+    font-size: 200px;
+    line-height: 200px;
+    mix-blend-mode: overlay;
+}
+
+.charType {
+    position: absolute;
+    left: 45px;
+    top: 435px;
+    text-transform: uppercase;
+}
+
+.charDescription {
+    position: absolute;
+    left: 43px;
+    top: 480px;
+    font-size: 12px;
+    max-width: 320px;
+    height: 72px;
+    max-height: 72px;
+}
+
+.charDescription p {
+    background: rgba(255,255,255,0.25);
+    border-radius: 4px;
+    padding: 5px;
+    margin: -5px;
+    height: 100%;
+}
+
+.charStats {
+    position: absolute;
+    right: 55px;
+    top: 65px;
+    font-size: 30px;
+    max-width: 335px;
+    font-weight: bold;
+}

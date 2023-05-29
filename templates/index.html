@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cards lol</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="flex-container">
+  {% for card in cards %}
+    <div class="cardContainer flex-child">
+        <img class="cardTemplate" src="{{url_for('static', filename='card.png')}}">
+        <img class="cardFace" src="{{card['cardarturl']}}">
+        <h1 class="cardTitle">{{card["name"]}}</h1>
+
+        {% for i in range(card["cost"]) %}
+          <span class="starLevel" style="left: {{45 + (25 * i)}}px;">&#x272A;</span>
+        {% endfor %}
+
+        <span class="cardIcon">{{card["unicodegfx"].encode('utf-16','surrogatepass').decode('utf-16')}}</span>
+        <h4 class="charType">[{{card["type"]}}]</h4>
+        <div class="charDescription">
+          <p>
+            {{card["effect"]}}
+            <br/>
+            <em>{{card["flavortext"]}}</em>
+          </p>
+        </div>
+        <p class="charStats">{{card["attack"]}} / {{card["hp"]}}</p>
+    </div>
+  {% endfor %}
+  </div>
+</body>
+</html>
