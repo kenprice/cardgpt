@@ -72,7 +72,7 @@
     left: 43px;
     top: 480px;
     font-size: 12px;
-    max-width: 320px;
+    width: 320px;
     height: 72px;
     max-height: 72px;
 }
@@ -83,6 +83,7 @@
     padding: 5px;
     margin: -5px;
     height: 100%;
+    width: 100%;
 }
 
 .charStats {

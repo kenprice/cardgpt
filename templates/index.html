@@ -10,7 +10,8 @@
 <body>
   <div class="flex-container">
   {% for card in cards %}
-    <div class="cardContainer flex-child">
+    <div class="flex-child">
+      <div class="cardContainer">
         <img class="cardTemplate" src="{{url_for('static', filename='card.png')}}">
         <img class="cardFace" src="{{card['cardarturl']}}">
         <h1 class="cardTitle">{{card["name"]}}</h1>
@@ -29,6 +30,7 @@
           </p>
         </div>
         <p class="charStats">{{card["attack"]}} / {{card["hp"]}}</p>
+      </div>
     </div>
   {% endfor %}
   </div>
